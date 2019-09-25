@@ -23,4 +23,7 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/', 'IndexController@index');
 Route::get('/blog', 'BlogController@blog');
 Route::get('/show/{id}', 'BlogController@show')->where('id', '\d+');
-Route::get('/catalog', 'CatalogController@catalog');
+//Route::match(['get', 'post'], '/catalog', 'CatalogController@catalog');
+Route::post('/comment', 'CommentController@comment');
+Route::get('/comment', 'CommentController@comment');
+//Route::post('/catalog', 'CatalogController@comment');

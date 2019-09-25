@@ -34,7 +34,7 @@
         <a class="nav-link mr-5" href="/blog">Блог</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link mr-5" href="#">Галерея</a>
+        <a class="nav-link mr-5" href="/catalog">Галерея</a>
       </li>
       <li class="nav-item">
         <a class="nav-link mr-5" href="#">Цены</a>
@@ -43,13 +43,20 @@
         <a class="nav-link mr-5" href="#">О нас</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link mr-5" href="#">Контакты</a>
+        <a class="nav-link mr-5" href="/comment">Комментарии</a>
       </li>
   </div>
 </nav>
 
 
   @yield('content')
+
+  <footer>
+    <hr>
+    <div class="container">
+      <p class="text-light">Coryright</p>
+    </div>
+  </footer>
 
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

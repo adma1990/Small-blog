@@ -14,10 +14,12 @@
     <div class="col-8">
       <p class="text-light">{{ $getShow->text }}</p>
     </div>
+ </div>
 
-  </div>
+
+
+
+
 </div>
-
-
 
 @endsection
