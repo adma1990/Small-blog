@@ -4,13 +4,15 @@
 <div class="container">
 
 @foreach ($comments as $comment)
-<p class="text-light">{{ $comment->nickname }}</p>
-<p class="text-light">{{ $comment->comment }}</p>
+<div class="card mt-4">
+  <div class="card-header">
+    {{ $comment->nickname }}
+  </div>
+  <div class="card-body" style="background-color: #292929;">
+    <p class="card-text text-light">{{ $comment->comment }}</p>
+  </div>
+</div>
 @endforeach
-
-
-
-
 
 <hr>
   <form method="POST" action="/comment">
@@ -23,6 +25,9 @@
       <label class="text-light" for="exampleFormControlTextarea1">Комментарий</label>
       <textarea class="form-control" name="comment" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
+
+    <p class="text-light">{{ $errors->first('nickname') }}</p>
+    <p class="text-light">{{ $errors->first('comment') }}</p>
     <p><button type="submit" class="btn btn-primary">Отправить</button></p>
   </form>
 </div>
