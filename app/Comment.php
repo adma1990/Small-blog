@@ -24,7 +24,8 @@ class Comment extends Model
 
       $name = request()->input('nickname');
       $comment = request()->input('comment');
-      DB::table('comments')->insert([
+
+      $insert = DB::table('comments')->insert([
       'nickname' => $name,
       'comment' => $comment,
      ]);

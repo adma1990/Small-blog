@@ -1,8 +1,9 @@
 @extends('layout.base')
 
 @section('content')
+<div class="container">
 @foreach ($getCards as $getCard):
-  <div class="container">
+
     <div class="col">
       <div class="card mb-3">
     <div class="row no-gutters">
@@ -21,7 +22,14 @@
     </div>
   </div>
   </div>
-</div>
+
 @endforeach
+<div class="col">
+  {{ $getCards->links() }}
+</div>
+
+</div>
+
+
 
 @endsection
