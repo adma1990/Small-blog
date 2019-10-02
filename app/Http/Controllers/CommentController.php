@@ -11,15 +11,29 @@ class CommentController extends Controller
 
   public function comment(){
   //Выводим комментарии на страницу
-  $comments = Comment::getComment();
+  $comments = Comment::all();
   return view('comment', compact('comments'));
   }
 
-  //вызов функции recComment. Запись в БД comments
-  public function store(){
+  
+  public function store(Request $request){
 
-  return Comment::recComment();
+    $validatedData = $request->validate([
+        'nickname' => 'required|max:100',
+        'comment' => 'required',
+    ]);
+
+    $name = request()->input('nickname');
+    $comment = request()->input('comment');
+
+    $insert = DB::table('comments')->insert([
+    'nickname' => $name,
+    'comment' => $comment,
+   ]);
+
+    return redirect()->back();
   }
+
 
 
 }

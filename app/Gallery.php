@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gallery extends Model
 {
-    public static function gallery(){
-      $gallery = DB::table('blogs')->select('image')->get();
-      return $gallery;
-    }
+   protected $table ='blogs';
+  
+
 }
