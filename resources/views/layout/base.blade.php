@@ -24,6 +24,9 @@
       <li class="nav-item active">
         <a class="nav-link mr-5" href="/">Главная <span class="sr-only">(current)</span></a>
       </li>
+
+    
+
       <li class="nav-item">
         <a class="nav-link mr-5" href="/blog">Блог</a>
       </li>

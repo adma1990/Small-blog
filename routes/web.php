@@ -23,7 +23,7 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/', 'IndexController@index');
 Route::get('/blog', 'BlogController@blog');
 Route::get('/show/{id}', 'BlogController@show')->where('id', '\d+');
-//Route::post('/show/{id}', 'BlogController@storeBlog')->where('id', '\d+');
+Route::get('/show_ganre/{id}', 'BlogController@show_ganre')->where('id', '\d+');
 Route::get('/comment', 'CommentController@comment');
 Route::post('/comment', 'CommentController@store');
 Route::get('/gallery', 'GalleryController@gallery');
